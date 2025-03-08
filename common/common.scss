@@ -1393,5 +1393,8 @@ div.topic-owner .topic-body .contents>.cooked::after {
 .extra-info-wrapper span {
   color: var(--header_primary); 
 }
-
+td .main-link {
+    width: 95%;
+    display: inline-block;
+}
 
