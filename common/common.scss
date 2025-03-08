@@ -1319,3 +1319,79 @@ html.mobile-view {
     }
   }
 }
+
+
+/*
+.last-posted-at .relative-date {
+    display: none;
+}
+*/
+/*
+.topic-list .activity {
+    display:none;
+}
+*/
+
+/*
+.md-tlm .discourse-tags::before {
+    display: none;
+}
+*/
+/*
+.md-tlm .tl-replies {
+    margin-right: 8px;
+}
+*/
+
+@import url("https://use.fontawesome.com/releases/v5.13.0/css/all.css");
+
+.discourse-tag.bullet::before, .discourse-tag.box::before {
+    content: "\f02b";
+    top: 0em;
+    font-size: 1.0em;
+    margin-right: 3px;
+    color: #ccc;
+}
+
+.discourse-tag.box::before {
+    color: #bbbdbb;
+    background: none;
+    height: 16px; /* Adjust for mobile view if necessary */
+    font-weight: 900;
+    font-size: 0.9em;
+    font-family: "Font Awesome 5 Free"; /* Correct font-family */
+}
+
+/*去除文章标签背景色*/
+.extra-info-wrapper .discourse-tag.box, .discourse-tag.box {
+    background: none;
+}
+
+
+/* 使菜单栏具有毛玻璃效果 */
+/*
+.d-header {
+
+    background-color: rgba(255, 255, 255, 0.01); 
+
+    backdrop-filter: blur(10px); 
+
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+*/
+
+/* 显示posts拥有者 */
+div.topic-owner .topic-body .contents>.cooked::after {
+    content: "TOPIC OWNER";
+    font-size: small;
+    color: #00aeff;
+    float: right;
+    font-style: italic;
+    font-weight: bold;
+}    
+
+.extra-info-wrapper span {
+  color: var(--header_primary); 
+}
+
+
