@@ -1161,12 +1161,38 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
     text-align: right;
   }
 
+  .topic-list .latest-poster-and-time {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    padding: 0 !important;
+    text-align: right;
+  }
+
+  .topic-list .latest-poster-and-time .d-icon,
+  .topic-list .latest-poster-and-time .fa,
+  .topic-list .latest-poster-and-time i,
+  .topic-list .latest-poster-and-time svg,
+  .topic-list .latest-poster-and-time::before,
+  .topic-list .latest-poster-and-time::after,
+  .topic-list .latest-poster-and-time .age::before,
+  .topic-list .latest-poster-and-time .age::after,
+  .topic-list .latest-poster-and-time .age a::before,
+  .topic-list .latest-poster-and-time .age a::after {
+    display: none !important;
+    content: none !important;
+  }
+
+  .topic-list .num.activity.last {
+    display: none !important;
+  }
+
   .topic-list .last-post .poster-info,
   .topic-list .last-post .poster-info .age,
   .topic-list .last-post .poster-info .age a,
-  .topic-list .num.activity.last,
-  .topic-list .num.activity.last .age,
-  .topic-list .num.activity.last .age a {
+  .topic-list .latest-poster-and-time .age,
+  .topic-list .latest-poster-and-time .age a {
     display: inline-flex;
     justify-content: flex-end;
     align-items: center;
@@ -1178,22 +1204,12 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
   .topic-list .last-post .poster-info .fa,
   .topic-list .last-post .poster-info i,
   .topic-list .last-post .poster-info svg,
-  .topic-list .num.activity.last .d-icon,
-  .topic-list .num.activity.last .fa,
-  .topic-list .num.activity.last i,
-  .topic-list .num.activity.last svg,
   .topic-list .last-post .poster-info::before,
   .topic-list .last-post .poster-info::after,
   .topic-list .last-post .poster-info .age::before,
   .topic-list .last-post .poster-info .age::after,
   .topic-list .last-post .poster-info .age a::before,
-  .topic-list .last-post .poster-info .age a::after,
-  .topic-list .num.activity.last::before,
-  .topic-list .num.activity.last::after,
-  .topic-list .num.activity.last .age::before,
-  .topic-list .num.activity.last .age::after,
-  .topic-list .num.activity.last .age a::before,
-  .topic-list .num.activity.last .age a::after {
+  .topic-list .last-post .poster-info .age a::after {
     display: none !important;
     content: none !important;
   }
@@ -1205,7 +1221,7 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
   .topic-list .topic-item-stats__category-tags {
     display: flex;
     align-items: center;
-    gap: 0.5em;
+    gap: 5px;
     line-height: 1.2;
   }
 
