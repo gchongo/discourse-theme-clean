@@ -5,10 +5,7 @@ export default {
 
   initialize() {
     withPluginApi("0.8.13", (api) => {
-      const site = api.container.lookup("site:main");
-      if (!site.mobileView) {
-        return;
-      }
+      const site = api.container.lookup("service:site");
 
       let scrollTop = window.scrollY;
       const body = document.body;
@@ -19,8 +16,20 @@ export default {
       const add_class_on_scroll = () => body.classList.add(hiddenNavClass);
       const remove_class_on_scroll = () =>
         body.classList.remove(hiddenNavClass);
+      const isMobileView = () => site.mobileView;
+
+      window.addEventListener("resize", function () {
+        if (!isMobileView()) {
+          remove_class_on_scroll();
+        }
+      });
 
       window.addEventListener("scroll", function () {
+        if (!isMobileView()) {
+          remove_class_on_scroll();
+          return;
+        }
+
         scrollTop = window.scrollY;
         if (
           lastScrollTop < scrollTop &&
