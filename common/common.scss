@@ -1151,15 +1151,74 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
     );
   }
 
+  .topic-list .topic-list-body .last-post {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    box-sizing: border-box;
+    padding-right: 6px;
+    text-align: right;
+  }
+
+  .topic-list .last-post .poster-info,
+  .topic-list .last-post .poster-info .age,
+  .topic-list .last-post .poster-info .age a,
+  .topic-list .num.activity.last,
+  .topic-list .num.activity.last .age,
+  .topic-list .num.activity.last .age a {
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 !important;
+    text-align: right;
+  }
+
   .topic-list .last-post .poster-info .d-icon,
+  .topic-list .last-post .poster-info .fa,
+  .topic-list .last-post .poster-info i,
   .topic-list .last-post .poster-info svg,
   .topic-list .num.activity.last .d-icon,
-  .topic-list .num.activity.last svg {
+  .topic-list .num.activity.last .fa,
+  .topic-list .num.activity.last i,
+  .topic-list .num.activity.last svg,
+  .topic-list .last-post .poster-info::before,
+  .topic-list .last-post .poster-info::after,
+  .topic-list .last-post .poster-info .age::before,
+  .topic-list .last-post .poster-info .age::after,
+  .topic-list .last-post .poster-info .age a::before,
+  .topic-list .last-post .poster-info .age a::after,
+  .topic-list .num.activity.last::before,
+  .topic-list .num.activity.last::after,
+  .topic-list .num.activity.last .age::before,
+  .topic-list .num.activity.last .age::after,
+  .topic-list .num.activity.last .age a::before,
+  .topic-list .num.activity.last .age a::after {
     display: none !important;
+    content: none !important;
   }
 
   td .main-link {
     width: 85%;
+  }
+
+  .topic-list .topic-item-stats__category-tags {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    line-height: 1.2;
+  }
+
+  .topic-list .topic-item-stats__category-tags .badge-category__wrapper,
+  .topic-list .topic-item-stats__category-tags .badge-wrapper,
+  .topic-list .topic-item-stats__category-tags .discourse-tags,
+  .topic-list .topic-item-stats__category-tags .discourse-tag {
+    display: inline-flex;
+    align-items: center;
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
   }
 }
 
