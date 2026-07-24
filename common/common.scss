@@ -1056,6 +1056,7 @@ table.topic-list {
 }
 
 $clean-topic-list-author-avatar-radius: 50%;
+$clean-topic-list-latest-poster-avatar-radius: 50%;
 
 @if $topic_list_author_avatar_shape == "rounded" or
   $topic_list_author_avatar_shape == "8px"
@@ -1067,10 +1068,22 @@ $clean-topic-list-author-avatar-radius: 50%;
   $clean-topic-list-author-avatar-radius: 0;
 }
 
+@if $topic_list_latest_poster_avatar_shape == "rounded" or
+  $topic_list_latest_poster_avatar_shape == "8px"
+{
+  $clean-topic-list-latest-poster-avatar-radius: 8px;
+} @else if $topic_list_latest_poster_avatar_shape == "square" or
+  $topic_list_latest_poster_avatar_shape == "0"
+{
+  $clean-topic-list-latest-poster-avatar-radius: 0;
+}
+
 :root {
-  --clean-topic-list-author-avatar-gap: 12px;
+  --clean-topic-list-author-avatar-gap: 6px;
   --clean-topic-list-author-avatar-size: #{$topic_list_author_avatar_size}px;
   --clean-topic-list-author-avatar-radius: #{$clean-topic-list-author-avatar-radius};
+  --clean-topic-list-latest-poster-avatar-size: #{$topic_list_latest_poster_avatar_size}px;
+  --clean-topic-list-latest-poster-avatar-radius: #{$clean-topic-list-latest-poster-avatar-radius};
 }
 
 .topic-list .posters,
@@ -1079,48 +1092,25 @@ $clean-topic-list-author-avatar-radius: 50%;
 .topic-list .posters.theme-avatar-extra_large,
 .topic-list .posters.theme-avatar-huge {
   --d-topic-list-avatar-size: var(
-    --clean-topic-list-author-avatar-size
+    --clean-topic-list-latest-poster-avatar-size
   ) !important;
-  width: calc(
-    var(--clean-topic-list-author-avatar-size) +
-      var(--clean-topic-list-author-avatar-gap)
-  ) !important;
-  min-width: calc(
-    var(--clean-topic-list-author-avatar-size) +
-      var(--clean-topic-list-author-avatar-gap)
-  ) !important;
-  padding-right: 0 !important;
 }
 
 .topic-list .topic-list-item .topic-list-item-mobile-avatar,
 .topic-list .topic-list-item .op-avatar {
-  margin-right: var(--clean-topic-list-author-avatar-gap);
-}
-
-.topic-list .topic-list-item .topic-list-item-mobile-avatar,
-.topic-list .topic-list-item .op-avatar,
-.topic-list .topic-list-item .avatar-wrapper,
-.topic-list .topic-list-item td.posters .latest,
-.topic-list .topic-list-item td.posters a {
   width: var(--clean-topic-list-author-avatar-size) !important;
   min-width: var(--clean-topic-list-author-avatar-size) !important;
   height: var(--clean-topic-list-author-avatar-size) !important;
   max-width: var(--clean-topic-list-author-avatar-size) !important;
   max-height: var(--clean-topic-list-author-avatar-size) !important;
+  margin-right: var(--clean-topic-list-author-avatar-gap) !important;
+  padding-right: 0 !important;
 }
 
 .topic-list .topic-list-item .topic-list-item-mobile-avatar img.avatar,
 .topic-list .topic-list-item .topic-list-item-mobile-avatar .avatar,
-.topic-list .topic-list-item .avatar-wrapper img.avatar,
-.topic-list .topic-list-item .avatar-wrapper .avatar,
 .topic-list .topic-list-item .op-avatar img.avatar,
-.topic-list .topic-list-item .op-avatar .avatar,
-.topic-list .topic-list-item td.posters img.avatar,
-.topic-list .topic-list-item td.posters .avatar,
-.topic-list .topic-list-item td.posters .letter-avatar,
-.topic-list .topic-list-item img.avatar[width][height],
-.topic-list .topic-list-item .avatar,
-.topic-list .topic-list-item .letter-avatar {
+.topic-list .topic-list-item .op-avatar .avatar {
   width: var(--clean-topic-list-author-avatar-size) !important;
   height: var(--clean-topic-list-author-avatar-size) !important;
   max-width: var(--clean-topic-list-author-avatar-size) !important;
@@ -1128,7 +1118,33 @@ $clean-topic-list-author-avatar-radius: 50%;
   border-radius: var(--clean-topic-list-author-avatar-radius) !important;
 }
 
+.topic-list .topic-list-item td.posters .latest,
+.topic-list .topic-list-item td.posters a {
+  width: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  min-width: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  height: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  max-width: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  max-height: var(--clean-topic-list-latest-poster-avatar-size) !important;
+}
+
+.topic-list .topic-list-item td.posters img.avatar,
+.topic-list .topic-list-item td.posters .avatar,
+.topic-list .topic-list-item td.posters .letter-avatar {
+  width: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  height: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  max-width: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  max-height: var(--clean-topic-list-latest-poster-avatar-size) !important;
+  border-radius: var(--clean-topic-list-latest-poster-avatar-radius) !important;
+}
+
 @media (width < 40rem) {
+  .topic-list .right {
+    margin-left: calc(
+      var(--clean-topic-list-author-avatar-size) +
+        var(--clean-topic-list-author-avatar-gap)
+    );
+  }
+
   td .main-link {
     width: 85%;
   }
