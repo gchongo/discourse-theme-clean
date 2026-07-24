@@ -1,3 +1,5 @@
+@import url("https://use.fontawesome.com/releases/v6.5.1/css/all.css");
+
 // button
 
 :root {
@@ -1060,6 +1062,19 @@ table.topic-list {
 
 :root {
   --category-badge-size: 0.85em;
+}
+
+.discourse-tag.bullet::before,
+.discourse-tag.box::before {
+  content: "\f02b";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  font-style: normal;
+  top: 0.05em;
+  font-size: 1.05em;
+  margin-right: 4px;
+  color: #ccc;
+  vertical-align: middle;
 }
 
 .discourse-tag.bullet::before {
