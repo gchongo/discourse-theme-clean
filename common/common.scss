@@ -176,6 +176,14 @@ input:hover,
   border-radius: var(--d-input-border-radius);
 }
 
+/* Transparent search controls */
+.search-menu .search-input,
+.search-menu .btn {
+  background: transparent !important;
+  /* border: none !important; */
+  /* box-shadow: none !important; */
+}
+
 /* Navigation */
 
 html.mobile-view #navigation-bar.nav-pills>li button{
@@ -326,6 +334,11 @@ body.has-full-page-chat .alert-warning {
 }
 body.has-full-page-chat .alert-info {
   border: 1px solid var(--tertiary-800);
+}
+
+.welcome-banner {
+  padding-block-start: 0;
+  padding-block-end: 0;
 }
 
 /* chat */
@@ -679,6 +692,16 @@ nav.post-controls .actions > button.reply:last-child:hover * {
 }
 
 /* Post stream */
+
+/* Show topic owner */
+div.topic-owner .topic-body .contents > .cooked::after {
+  content: "TOPIC OWNER";
+  font-size: small;
+  color: #00aeff;
+  float: right;
+  font-style: italic;
+  font-weight: bold;
+}
 
 .embedded-posts {
   border-radius: var(--ant-radius);
