@@ -341,6 +341,10 @@ body.has-full-page-chat .alert-info {
   padding-block-end: 0;
 }
 
+html.mobile-view .welcome-banner {
+  display: block;
+}
+
 /* chat */
 .btn.no-text.btn-flat.chat-scroll-to-bottom__button {
   background: transparent;
