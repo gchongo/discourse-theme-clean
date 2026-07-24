@@ -17,11 +17,11 @@ topic_list_author_avatar_size:
     en: "Author avatar size in topic lists, in pixels."
 
 topic_list_author_avatar_shape:
-  default: 50%
+  default: circle
   type: enum
   choices:
-    - 50%
-    - 8px
-    - 0
+    - circle
+    - rounded
+    - square
   description:
-    en: "Author avatar border radius in topic lists. 50% is circle, 8px is rounded, 0 is square."
+    en: "Author avatar shape in topic lists."
