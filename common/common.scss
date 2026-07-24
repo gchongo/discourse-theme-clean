@@ -519,6 +519,16 @@ nav.post-controls .actions > button.reply:last-child:hover * {
   color: var(--header_primary);
 }
 
+.btn-sidebar-toggle .d-icon-bars,
+.d-header .d-icon-circle-question,
+.d-header .d-icon-d-chat,
+.d-header .d-icon-magnifying-glass {
+  font-size: 2em;
+  height: 2em;
+  width: 2em;
+  scale: 1 !important;
+}
+
 .user-menu.revamped .tabs-list .btn {
   border-radius: 0;
 }
@@ -1157,7 +1167,7 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
     align-items: flex-end;
     justify-content: center;
     box-sizing: border-box;
-    padding-right: 6px;
+    padding-right: 2px;
     text-align: right;
   }
 
