@@ -351,6 +351,12 @@ html.mobile-view .welcome-banner {
   margin: 1.33em 0;
 }
 
+:where(.uc-modernize-foundation-theme) .welcome-banner__title {
+  font-size: var(--d-welcome-banner-header-size);
+  font-weight: 50;
+  text-align: var(--welcome-banner-text-align);
+}
+
 /* chat */
 .btn.no-text.btn-flat.chat-scroll-to-bottom__button {
   background: transparent;
