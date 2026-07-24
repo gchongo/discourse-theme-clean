@@ -345,6 +345,12 @@ html.mobile-view .welcome-banner {
   display: block;
 }
 
+.welcome-banner__subheader {
+  font-size: 0.5em;
+  font-weight: normal;
+  margin: 1.33em 0;
+}
+
 /* chat */
 .btn.no-text.btn-flat.chat-scroll-to-bottom__button {
   background: transparent;
