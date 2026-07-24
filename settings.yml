@@ -5,18 +5,23 @@ svg_icons:
 
 topic_list_author_avatar_size:
   default: 40
-  type: integer
-  min: 24
-  max: 64
+  type: enum
+  choices:
+    - 24
+    - 32
+    - 40
+    - 48
+    - 56
+    - 64
   description:
     en: "Author avatar size in topic lists, in pixels."
 
 topic_list_author_avatar_shape:
-  default: circle
+  default: 50%
   type: enum
   choices:
-    - circle
-    - rounded
-    - square
+    - 50%
+    - 8px
+    - 0
   description:
-    en: "Author avatar shape in topic lists."
+    en: "Author avatar border radius in topic lists. 50% is circle, 8px is rounded, 0 is square."
