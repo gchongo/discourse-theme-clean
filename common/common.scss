@@ -1063,19 +1063,35 @@ $topic-list-author-avatar-border-radius: 50%;
   $topic-list-author-avatar-border-radius: 0;
 }
 
-.topic-list .topic-list-item {
-  .topic-list-item-mobile-avatar .avatar,
-  .op-avatar .avatar,
-  td.posters a:first-child .avatar {
-    width: #{$topic-list-author-avatar-size}px;
-    height: #{$topic-list-author-avatar-size}px;
-    border-radius: $topic-list-author-avatar-border-radius;
-  }
+:root {
+  --clean-topic-list-author-avatar-size: #{$topic-list-author-avatar-size}px;
+  --clean-topic-list-author-avatar-radius: #{$topic-list-author-avatar-border-radius};
+}
 
-  .topic-list-item-mobile-avatar,
-  .op-avatar {
-    min-width: #{$topic-list-author-avatar-size}px;
-  }
+.topic-list .topic-list-item .topic-list-item-mobile-avatar,
+.topic-list .topic-list-item .op-avatar,
+.topic-list .topic-list-item .avatar-wrapper,
+.topic-list .topic-list-item td.posters a:first-child {
+  width: var(--clean-topic-list-author-avatar-size) !important;
+  min-width: var(--clean-topic-list-author-avatar-size) !important;
+  height: var(--clean-topic-list-author-avatar-size) !important;
+  max-width: var(--clean-topic-list-author-avatar-size) !important;
+  max-height: var(--clean-topic-list-author-avatar-size) !important;
+}
+
+.topic-list .topic-list-item .topic-list-item-mobile-avatar img.avatar,
+.topic-list .topic-list-item .topic-list-item-mobile-avatar .avatar,
+.topic-list .topic-list-item .avatar-wrapper img.avatar,
+.topic-list .topic-list-item .avatar-wrapper .avatar,
+.topic-list .topic-list-item .op-avatar img.avatar,
+.topic-list .topic-list-item .op-avatar .avatar,
+.topic-list .topic-list-item td.posters a:first-child img.avatar,
+.topic-list .topic-list-item td.posters a:first-child .avatar {
+  width: var(--clean-topic-list-author-avatar-size) !important;
+  height: var(--clean-topic-list-author-avatar-size) !important;
+  max-width: var(--clean-topic-list-author-avatar-size) !important;
+  max-height: var(--clean-topic-list-author-avatar-size) !important;
+  border-radius: var(--clean-topic-list-author-avatar-radius) !important;
 }
 
 @media (width < 40rem) {
