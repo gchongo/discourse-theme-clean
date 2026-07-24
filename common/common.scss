@@ -597,6 +597,17 @@ nav.post-controls .actions > button.reply:last-child:hover * {
 #create-topic.btn-default:hover {
   background: var(--tertiary-hover);
 }
+
+.d-combo-button.topic-create-button__combo.--has-menu {
+  min-width: 120px;
+  min-height: 40px;
+}
+
+.d-combo-button.topic-create-button__combo.--has-menu .btn {
+  height: 40px;
+  min-height: 40px;
+}
+
 .mobile-view .group-details-after-outlet.invite {
   margin-top: 8px;
 }
