@@ -471,6 +471,10 @@ nav.post-controls .actions > button.reply:last-child:hover * {
 }
 
 /* header */
+.d-header-wrap {
+  height: 60px;
+}
+
 .drop-down-mode .d-header-icons .active .icon {
   border: 1px solid transparent;
   border-radius: 100%;
@@ -939,7 +943,7 @@ div.edit-category .edit-category-nav .nav-stacked,
   .mobile-view .list-controls .navigation-controls {
     position: fixed;
     /*         border: 2px solid; */
-    width: 40px;
+    width: 50px;
     right: 27px;
     bottom: 90px;
     z-index: 99;
@@ -955,6 +959,9 @@ div.edit-category .edit-category-nav .nav-stacked,
     border: 1px solid var(--primary-300);
     color: var(--secondary);
     box-shadow: var(--float-btn-shadow);
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
   }
   .mobile-view .list-controls .navigation-controls > .btn .d-icon,
   .mobile-view
