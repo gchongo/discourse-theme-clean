@@ -1070,8 +1070,11 @@ table.topic-list {
   --category-badge-size: 0.85em;
 }
 
-.discourse-tag {
+.discourse-tag,
+.discourse-tag.bullet,
+.discourse-tag.box {
   background: transparent;
+  background-color: transparent;
 }
 
 .discourse-tag.bullet::before,
