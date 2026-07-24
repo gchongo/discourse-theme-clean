@@ -523,9 +523,6 @@ nav.post-controls .actions > button.reply:last-child:hover * {
 .d-header .d-icon-circle-question,
 .d-header .d-icon-d-chat,
 .d-header .d-icon-magnifying-glass {
-  font-size: 2em;
-  height: 2em;
-  width: 2em;
   scale: 1 !important;
 }
 
@@ -1233,6 +1230,7 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
     align-items: center;
     gap: 5px;
     line-height: 1.2;
+    margin-right: 0;
   }
 
   .topic-list .topic-item-stats__category-tags .badge-category__wrapper,
