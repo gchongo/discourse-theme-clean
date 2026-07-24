@@ -1055,6 +1055,29 @@ table.topic-list {
   }
 }
 
+$topic-list-author-avatar-border-radius: 50%;
+
+@if $topic-list-author-avatar-shape == "rounded" {
+  $topic-list-author-avatar-border-radius: 8px;
+} @else if $topic-list-author-avatar-shape == "square" {
+  $topic-list-author-avatar-border-radius: 0;
+}
+
+.topic-list .topic-list-item {
+  .topic-list-item-mobile-avatar .avatar,
+  .op-avatar .avatar,
+  td.posters a:first-child .avatar {
+    width: #{$topic-list-author-avatar-size}px;
+    height: #{$topic-list-author-avatar-size}px;
+    border-radius: $topic-list-author-avatar-border-radius;
+  }
+
+  .topic-list-item-mobile-avatar,
+  .op-avatar {
+    min-width: #{$topic-list-author-avatar-size}px;
+  }
+}
+
 @media (width < 40rem) {
   td .main-link {
     width: 85%;
