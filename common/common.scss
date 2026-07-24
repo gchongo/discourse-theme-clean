@@ -1055,6 +1055,12 @@ table.topic-list {
   }
 }
 
+@media (width < 40rem) {
+  td .main-link {
+    width: 85%;
+  }
+}
+
 .topic-list-layout-table-ai .topic-list-item .excerpt__contents {
   font-size: var(--font-down-1);
   max-width: unset;
@@ -1062,6 +1068,10 @@ table.topic-list {
 
 :root {
   --category-badge-size: 0.85em;
+}
+
+.discourse-tag {
+  background: transparent;
 }
 
 .discourse-tag.bullet::before,
