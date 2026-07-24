@@ -351,10 +351,14 @@ html.mobile-view .welcome-banner {
   margin: 1.33em 0;
 }
 
-:where(.uc-modernize-foundation-theme) .welcome-banner__title {
+.uc-modernize-foundation-theme .welcome-banner__title {
   font-size: var(--d-welcome-banner-header-size);
   font-weight: 50;
   text-align: var(--welcome-banner-text-align);
+}
+
+html.mobile-view .uc-modernize-foundation-theme .welcome-banner__title {
+  font-size: var(--font-up-1) !important;
 }
 
 /* chat */
