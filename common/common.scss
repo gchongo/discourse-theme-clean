@@ -1345,13 +1345,13 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
 .discourse-tag.box::before {
   content: "";
   display: inline-block;
-  width: 0.9em;
-  height: 0.9em;
+  width: 0.95em;
+  height: 0.95em;
   margin-right: 4px;
-  vertical-align: -0.08em;
-  // Match Discourse far-* icons (filled outline path, not stroke SVG)
+  vertical-align: -0.1em;
   background-color: var(--primary-medium, #919191);
-  --clean-tag-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3Cpath fill='black' fill-rule='evenodd' d='M0 80C0 53.5 21.5 32 48 32h149.5c17 0 33.3 6.7 45.3 18.7l176 176c25 25 25 65.5 0 90.5L272.5 463.5c-25 25-65.5 25-90.5 0L18.7 300.3C6.7 288.3 0 272 0 255V80zm40 32c0-8.8 7.2-16 16-16h141.5c8.5 0 16.6 3.4 22.6 9.4L385.9 262c12.5 12.5 12.5 32.8 0 45.3L230.1 463.1c-12.5 12.5-32.8 12.5-45.3 0L31.3 309.7c-6-6-9.4-14.1-9.4-22.6V128c0-8.8 7.2-16 16-16h2.1zM112 192a32 32 0 1 0 0-64 32 32 0 1 0 0 64zm0-16a16 16 0 1 0 0-32 16 16 0 1 0 0 32z'/%3E%3C/svg%3E");
+  // Match reference: rounded hollow tag with solid hole (Lucide-style)
+  --clean-tag-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z'/%3E%3Ccircle cx='7.5' cy='7.5' r='1.25' fill='black' stroke='none'/%3E%3C/svg%3E");
   mask-image: var(--clean-tag-icon);
   mask-size: contain;
   mask-repeat: no-repeat;
