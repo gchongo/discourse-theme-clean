@@ -70,19 +70,25 @@
 
 .category-drop.category-breadcrumb__category-selector,
 .tag-drop {
-  width: 71px;
-  min-width: 71px;
-  max-width: 71px;
+  width: auto;
+  min-width: unset;
+  max-width: none;
   height: 40px;
 
   .select-kit-header {
     box-sizing: border-box;
-    width: 71px;
-    min-width: 71px !important;
-    max-width: 71px;
+    width: auto;
+    min-width: unset !important;
+    max-width: none;
     height: 40px;
     min-height: 40px;
     padding: 0 8px;
+    white-space: nowrap;
+  }
+
+  .select-kit-header .name {
+    overflow: visible;
+    text-overflow: unset;
   }
 }
 
