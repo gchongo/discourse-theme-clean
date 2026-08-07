@@ -1362,6 +1362,16 @@ $clean-topic-list-latest-poster-avatar-radius: 50%;
   -webkit-mask-position: center;
 }
 
+// Search results already show a tag icon; hide the duplicated ::before
+.search-result-tag .discourse-tag.box::before,
+.search-result-tag .discourse-tag.bullet::before {
+  content: none !important;
+  display: none !important;
+  margin: 0 !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
 .badge-category__wrapper .badge-category {
   align-items: center;
 }
